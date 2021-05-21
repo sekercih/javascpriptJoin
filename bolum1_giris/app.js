@@ -37,6 +37,7 @@ console.log(typeof isim); // ? Number
 //**  -----  LET -----
 // ? Eğerki değişkenimzin değerinin değişmesi gerekiyor ise const kullanamayız. Bunun yerine LET kullanabiliriz.
 // ! LET Block-scope bir değişkendir. VAR ise global-scope bir tanımlamadır.
+
 // * Block-scope: Sadece tanımlı olduğu alanda geçerlidir.
 let fiyat;
 console.log(fiyat);
@@ -67,6 +68,7 @@ console.log(ad + " " + soyAd);
 const s1 = 7,
   s2 = "7";
 console.log(s1 + s2);
+
 // Template Literal ( String Şablonları, ES6 ile gelmiştir. )
 const ad1 = "Mesut";
 const yaş = 55;
@@ -76,6 +78,7 @@ const yıl = 2021;
 const dogumTarihi = 1980;
 const sene = yıl - dogumTarihi;
 console.log("YAŞ:" + sene);
+
 // console.log("YAŞ:" + yıl - dogumTarihi);   // !Hata --->  NaN = Not a Number
 console.log("YAŞ:" + (yıl - dogumTarihi));
 console.log(`YAŞ:${yıl - dogumTarihi}`); // * Template Literal ile yazdırma.
@@ -83,7 +86,9 @@ const taban = 2;
 const us = 8;
 const sonuc = taban ** us; // ? Us alma operatoru
 console.log(sonuc);
+
 // Mod alma %
+
 const sayi = 123;
 const birler = sayi % 10;
 const onlar = Math.floor(sayi / 10) % 10;
@@ -91,6 +96,7 @@ const yuzler = Math.floor(sayi / 100);
 console.log("Birler:" + birler);
 console.log("Onlar:" + onlar);
 console.log("Yuzler:" + yuzler);
+
 // * KARŞILAŞTIRMA OPERATÖRLERİ
 // ! 3'lü karşılaştırma operatörü kullanıldığında hem veri tipi hem de içerik kontrolü yapılır.
 const sayi1 = 100;
@@ -103,19 +109,28 @@ const y = true;
 const z = undefined;
 console.log(x && y && z); // undefined
 
-//const age = +prompt("Yaşinizi giriniz?");
-const age = Number(prompt("Yaşinizi giriniz?"));
-console.log("Yaşiniz :" + age);
-console.log(typeof age);
-
-const name22 = prompt("Adinizi Giriniz");
-const age1 = Number(prompt("Yaşinizi Giriniz"));
-
+//**  ======== TERNARY ==========
+// const age = +prompt("Yasinizi giriniz:");
+const name1 = prompt("Adinizi giriniz:");
+const age = Number(prompt("Yasinizi giriniz:"));
 age >= 18
-  ? console.log(`${name22} ehliyet alabilir`)
-  : console.log(`${name22} ehliyet alamaz`);
-
+  ? console.log(`${name1} ehliyet alabilir`)
+  : console.log(`${name1} ehliyet alamaz`);
 const result =
-  age1 >= 18 ? `${name22} ehliyet alabilir` : `${name22} ehliyet alamaz`;
-
+  age >= 18 ? `${name1} ehliyet alabilir` : `${name1} ehliyet alamaz`;
 console.log(result);
+
+const sayi4 = 41;
+
+console.log(String(sayi4), sayi4);
+
+/*
+• const ile let arasındaki farklar nelerdir?
+const ile oluşturulan bir değişkene daha sonrasında tekrar değer ataması yapılamaz. let ile oluşturduğumuz bir değişkene daha sonrasında yeni bir değer atayabiliriz.
+• let ile var arasındaki farklar nelerdir?
+İlk olarak, var ve let’i karşılaştıralım. var ve let arasında ki fark, var function scope özelliği taşırken, let block scope özelliği taşımaktadır. Yani let ile oluşturulan bir değişken sadece oluşturulduğu yerdeki süslü parantezler içerisinde erişilebilirdir ve dışarısında kullanılamaz.
+• == ile === farkı nedir?
+Her iki işaretin de eşitlik kontrolü yapıyor. Farkı == kullandığımız zaman karşılaştırılan değerlerin tiplerine bakmadan kontrolü yapar. Yani “5” == 5 dediğimiz zaman sonuç true(doğru) dönecektir.   Ama === kullandığımız zaman tiplerinin de aynı olması beklenir, yani 5 === “5" false (yanlış) dönecektir. 5 === 5 ya da “5” === “5" doğru olarak dönecektir. Mümkün olan her yerde === ile karşılaştırma yaparsak Kendinizi daha güvende hissederiz.
+• 5 adet falsy değeri içeren veri tipleri nelerdir?
+0, null, undefined, NaN, ve ” ” Javascript tarafından false olarak. kabul edilir.
+Diğer sayılar Boolean’a  çevrildiğinde true olarak kabul edilir.*/
