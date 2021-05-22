@@ -144,3 +144,30 @@ tasarlayınız. Çevirimin hangi birimden hangi birime olacağı program başın
 // } else {
 //   console.log("Uygun sıcaklık birimi seciniz C/F");
 // }
+
+// do {
+//   not = prompt("0-100 arasında bir not giriniz:");
+// } while (not < 0 || not > 100);
+// console.log("Giridiğiniz not 0-100 arasındadır");
+// let not = prompt("0-100 arasında bir not giriniz:");
+
+// while (
+//   not < 0
+//     ? (not = prompt("0-100 arasında bir not giriniz:"))
+//     : not < 0 || not > 100
+// );
+// console.log("Giridiğiniz not 0-100 arasındadır");
+
+let not1;
+let i = 1;
+
+while (true) {
+  not1 = prompt(i + ".kişinin notunu giriniz");
+
+  not1 = not1.toLowerCase();
+  if (not1 == "q") {
+    break;
+  }
+  i++;
+  console.log(Number(not1));
+}
