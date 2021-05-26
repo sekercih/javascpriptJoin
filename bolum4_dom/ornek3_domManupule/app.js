@@ -48,3 +48,4 @@ document.querySelector(".sil").onclick = function () {
   const liste = document.querySelector(".liste");
   liste.removeChild(liste.firstElementChild);
 };
+h1.className = "yeni-h1"; // olustrdugumuz h1 elemanına bir class adı atadık.

@@ -1,0 +1,13 @@
+h1{
+ margin: auto;
+ border-style: dotted;
+ border-color: pink;
+ 
+ width: 300px;
+ height: 200px;
+margin-top: 40px;
+}
+.buton{
+margin-left: 640px;
+margin-top: 10px;
+}
