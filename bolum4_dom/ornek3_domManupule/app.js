@@ -28,8 +28,7 @@ document.querySelector(".textbox").onkeyup = function () {
 const sonDiv = document.querySelector(".input-1");
 const h1 = document.createElement("h1");
 const yazi = document.createTextNode("Programlama Dilleri");
-h1.appendChild(yazi);
-sonDiv.after(h1);
+
 h1.style.color = "red";
 h1.style.marginTop = "20px";
 h1.style.backgroundColor = "yellow";
