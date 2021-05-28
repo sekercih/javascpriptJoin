@@ -154,10 +154,14 @@ const zamliTlFiyatlar = tlFiyatlar.map((deger, indis) => {
 document.querySelector(".zamli-fiyat").innerHTML = zamliTlFiyatlar;
 console.log(zamliTlFiyatlar);
 
-const kucuk350 = tlFiyatlar.filter((d) => d < 350);
-console.log(kucuk350);
+// tlFiyatlar listesinde fiyatı 250 TL den az olanlari ayri bir diziye saklayalim.
+const kucuk250 = tlFiyatlar.filter((d) => d < 250);
+console.log(kucuk250);
+//fiyati 350 küçük olanlari yazdiriniz.
+tlFiyatlar.filter((d) => d < 350).forEach((x) => console.log(x));
+// Küçükten büyüğe sıralama
+console.log(tlFiyatlar.sort((a, b) => a - b));
+// Büyükten küçüğe  sıralama
+console.log(tlFiyatlar.sort((a, b) => b - a));
 
-console.log(tlFiyatlar.sort((a,b)=>a-b));
-console.log(tlFiyatlar.sort((a,b)=>b-a));
-
-console.log(kucuk350.sort((a, b) => a - b));
+console.log(kucuk250.sort((a, b) => a - b));
