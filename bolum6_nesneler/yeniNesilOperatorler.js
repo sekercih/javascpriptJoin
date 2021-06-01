@@ -67,3 +67,5 @@ const birlesim = ["Ucak", "Helikopter", "Bisiklet", ...otomobiller];
 console.log(birlesim);
 const birlesim1 = [...araclar, ...otomobiller];
 console.log(birlesim1);
+
+

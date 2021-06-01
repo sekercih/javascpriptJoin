@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
-
 /* Değişkenlerin tanımlanması */
 :root {
   /* Asıl renklerin koyu tonları */
@@ -8,20 +7,18 @@
   --mavi-3: hsl(205, 72%, 37%);
   --mavi-4: hsl(205, 63%, 48%);
   --mavi-5: hsl(205, 78%, 60%);
-
   /* asıl renklerin açık tonları */
   --mavi-6: hsl(205, 89%, 70%);
   --mavi-7: hsl(205, 90%, 76%);
   --mavi-8: hsl(205, 86%, 81%);
   --mavi-9: hsl(205, 90%, 88%);
   --mavi-10: hsl(205, 100%, 96%);
-
+  --mavi-11: hsl(206, 3%, 95%);
   /* Başlıklar için kullanılan koyu tonlar */
   --gri-1: hsl(209, 61%, 16%);
   --gri-2: hsl(211, 39%, 23%);
   --gri-3: hsl(209, 34%, 30%);
   --gri-4: hsl(209, 28%, 39%);
-
   /* Paragraflar için kullanılılan renkler */
   --gri-5: hsl(210, 22%, 49%);
   --gri-6: hsl(209, 23%, 60%);
@@ -35,34 +32,30 @@
   --koyu-yeşil: hsl(125, 67%, 44%);
   --açık-yeşil: hsl(125, 71%, 66%);
   --siyah: #222;
-  --koyu-gölge: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  --koyu-gölge: 0px 0px 15px rgba(0, 0, 0, 0.4);
   --açık-gölge: 0px 5px 15px rgba(0, 0, 0, 0.1);
   --ff-roboto: "Roboto", sans-serif;
   --ff-opensans: "Open Sans", sans-serif;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: var(--ff-opensans);
   background: var(--gri-10);
   color: var(--gri-1);
   font-size: 15px;
 }
-
 h2 {
   font-size: 40px;
 }
-
 h4 {
   font-size: 15px;
   color: var(--mavi-3);
 }
-
+/* // Medya sorgusu */
 @media screen and (min-width: 800px) {
   h2 {
     font-size: 50px;
@@ -71,7 +64,6 @@ h4 {
     font-size: 20px;
   }
 }
-
 main {
   min-height: 100vh;
   display: grid;
@@ -92,14 +84,12 @@ main {
   width: 80vw;
   max-width: 600px;
 }
-
 .yorum {
   text-align: center;
   background-color: white;
-  box-shadow: var(--açık-gölge);
+  box-shadow: var(--koyu-gölge);
   border: 1px solid white;
 }
-
 .img-container {
   position: relative;
   margin: 0 auto;
@@ -119,8 +109,7 @@ main {
   background-color: var(--mavi-6);
   border-radius: 50%;
 }
-
-#kişi-resim {
+#kisi-resim {
   width: 100%;
   height: 100%;
   display: block;
@@ -128,11 +117,9 @@ main {
   object-fit: cover;
   position: relative;
 }
-
-#açıklama {
+#aciklama {
   margin-bottom: 0.75rem;
 }
-
 #yazar {
   margin-bottom: 10px;
 }
@@ -142,12 +129,10 @@ main {
   color: var(--mavi-6);
   font-size: 12px;
 }
-
 #açıklama {
   margin-bottom: 15px;
   color: var(--gri-5);
 }
-
 .geri-btn,
 .ileri-btn {
   font-size: 18px;
